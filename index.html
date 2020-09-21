@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <script type="text/javascript" src="js/cookie.js"></script>
+        <title>Masny Clicker</title>
+        <link rel = "stylesheet" href = "main.css"/>
+    </head>
+
+    <body>
+        <br>
+        <h1>Masny Clicker</h1>  
+        <br>
+        <div id = "cookie" onclick="cookieClick()">
+            <img src="https://yt3.ggpht.com/a/AATXAJzn7fcb_24JysrUGgDqVpzFWdtP6ke1OAHFfKhWhA=s900-c-k-c0xffffffff-no-rj-mo" width="200px"/>
+        </div>
+        <br>
+        <p>Liczba kliknięć</p>
+        <br>
+        <div id = "numbers"></div>
+          <p>twój poziom</p>
+        <div id= "upgradeLevel"></div>
+        <br>
+        <p>masno instrukcja: Klikosz sobie w nasze mordy i wbijosz masne punkty dzieki ktorym masz coraz masniejszy lvl. Naura!</p>
+       <div id="footer">Strona nie zostala stworzona z inicjatywy  chlopakow z masno, stworzyl ja jeden  z widzow</div>
+  <p class="update">Aktualizacja <span>21.09.2020</span><br><br>Serwis dopiero sie rozwija dlatego nie ma tu jeszcze za duzo, ale ciagle dokladamy staran aby  rozwijac projekt, z czasem pojawia sie nowe aktualizacje! pozdro
+      
+      W razie pytan/sugestii zapraszamy do kontaktu poprzez mail: <span>masnyclicker@int.pl</span> 
+        </p>
+<script>
+var num = 0;
+var cookie = document.getElementById("cookie");
+function cookieClick() { 
+    num += 1;
+    var numbers = document.getElementById("numbers");
+    var upgradeLevel = document.getElementById("upgradeLevel");
+    numbers.innerHTML = num;      
+    if(num >= 30 ){
+        num += 2;
+        upgradeLevel.innerHTML = "MASNO LVL1";
+    }
+    if(num >= 500) {
+        num += 10;
+        upgradeLevel.innerHTML = "MASNO LVL2";
+    }
+    if(num >= 1000) {
+        num += 30;
+        upgradeLevel.innerHTML = "MASNO LVL3";
+    }
+    if(num >= 100000) {
+        num += 1000;
+        upgradeLevel.innerHTML = "MASNO LVL4";
+    }
+}
+</script>
+    </body>
+</html>
